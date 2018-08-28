@@ -1,0 +1,17 @@
+CREATE DATABASE admin;
+
+CREATE TABLE `admin`.`users` 
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `first_name` VARCHAR(50) NOT NULL,
+     `last_name` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
+    `hash` VARCHAR(32) NOT NULL,
+    `active` BOOLEAN NOT NULL DEFAULT 0,
+PRIMARY KEY (`id`) 
+);
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `hash`, `active`) VALUES
+(1, 'admin', ' ', 'admin@b', '$2y$10$a4jCskPfyRkjR1uqMIZtIuiNiA5It3jlBJvwqke.RQ27QCimIFM12', 'cdc0d6e63aa8e41c89689f54970bb35f', 0),
+(2, 'Subhendra', 'Satapathy', 'sks@s', '$2y$10$qtVqbGlViO6LC2SHxek1qeGEhwH.KP9PJabEGNIQjCVlsS6Y/KJ16', '7c590f01490190db0ed02a5070e20f01', 0);
